@@ -1,0 +1,155 @@
+oro.user.form.choose_user: Choose a user...
+oro.user.form.choose_gender: Choose a gender...
+oro.user.gender.male: Male
+oro.user.gender.female: Female
+
+change_password:
+    flash:
+        success: The password has been changed
+
+resetting:
+    flash:
+        success: The password has been successfully reset
+
+"%%username%% - View user - User Management": "%%username%% -View user - User Management"
+"%%username%% - Edit user - User Management": "%%username%% - Edit user - User Management"
+"New user - User Management": "New user - User Management"
+"Users - User Management": "Users - User Management"
+
+"Edit role - User management": "Edit role - User management"
+"Add role - User management": "Add role - User management"
+"Roles - User management": "Roles - User management"
+
+Login: Login
+"User Status - User Management": "User Status - User Management"
+"Add Status - User Management": "Add Status - User Management"
+
+"Password Reset": Password Reset
+"Forgot Password": "Forgot Password"
+"Password Reset - Check Email": "Password Reset - Check Email"
+
+"Acl Resources - User Management": "Acl Resources - User Management"
+
+"Edit group - User Management": "Edit group - User Management"
+"Add group - User Management": "Add group - User Management"
+"Groups - User Management": "Groups - User Management"
+"Group manipulation": "Group manipulation"
+"Create group": "Create group"
+"Create new group": "Create new group"
+"Edit group": "Edit group"
+"View group list": "View group list"
+"List of groups": "List of groups"
+"User manipulation": "User manipulation"
+"View user user": "View user user"
+"Generate new API key": "Generate new API key"
+"Create user user": "Create user user"
+"Edit user user": "Edit user user"
+"View list of user users": "View list of user users"
+"Reset user password": "Reset user password"
+"reset password": "reset password"
+"Oro Reset password page": "Oro Reset password page"
+"send reset mail": "send reset mail"
+"Request reset user password": "Request reset user password"
+"reset password check email": "reset password check email"
+"Tell the user to check his email provider": "Tell the user to check his email provider"
+"reset password": "reset password"
+"Reset user password": "Reset user password"
+"Role manipulation": "Role manipulation"
+"Create role": "Create role"
+"Create new role": "Create new role"
+"Edit role": "Edit role"
+"View role list": "View role list"
+"List of roles": "List of roles"
+"Oro Security": "Oro Security"
+"Login page": "Login page"
+"Oro Login page": "Oro Login page"
+"Login check": "Login check"
+"Oro Login check": "Oro Login check"
+"Logout": "Logout"
+"Oro Logout": "Oro Logout"
+"ACL manipulation": "ACL manipulation"
+"ACL manipulation from API": "ACL manipulation from API"
+"View ACL tree": "View ACL tree"
+"View ACL tree for a particular role": "View ACL tree for a particular role"
+"View ACL resource": "View ACL resource"
+"View user group": "View user group"
+"Remove group": "Remove group"
+"View group roles": "View group roles"
+"Remove user user": "Remove user user"
+"View user roles": "View user roles"
+"View user groups": "View user groups"
+"View user ACL": "View user ACL"
+"View role": "View role"
+"Remove role": "Remove role"
+"Template controller": "Template controller"
+
+oro:
+    dashboard:
+        recent_emails:
+            title:      Recent Emails
+            inbox:      Inbox
+            sent:       Sent
+            view_all:   View All
+
+    user:
+        controller:
+            group.message.saved: "Group saved"
+            role.message.saved: "Role saved"
+            user.message.saved: "User saved"
+            status.message.saved: "Status saved"
+        #
+        # Oro/Bundle/UserBundle/Entity/User
+        #
+        entity_label:        User
+        entity_plural_label: Users
+        entity_description:  Represent user profile
+        id.label:          Id
+        username.label:    Username
+        email.label:       Email
+        name_prefix.label: Name prefix
+        first_name.label:  First name
+        middle_name.label: Middle name
+        last_name.label:   Last name
+        name_suffix.label: Name suffix
+        birthday.label:    Birthday
+        image.label:       Avatar
+        enabled.label:     Status
+        salt.label:        Salt
+        password.label:    Password
+        last_login.label:  Last logged in
+        login_count.label: Login count
+        created_at.label:  Created
+        updated_at.label:  Updated
+        owner.label:       Owner
+        roles.label:       Roles
+        groups.label:      Groups
+        api.label:         API key
+        statuses.label:    Statuses
+        emails.label:      Emails
+        current_status.label: Current status
+        business_units.label: Business Units
+        confirmation_token.label: Confirmation token
+        password_requested_at.label: Password requested at
+        imap_configuration.label: Email synchronization settings
+        #
+        # Oro/Bundle/UserBundle/Entity/Group
+        #
+        group:
+            entity_label:        Group
+            entity_plural_label: Groups
+            entity_description:  Group of roles
+            id.label:    Id
+            name.label:  Name
+            roles.label: Roles
+            owner.label: Owner
+        #
+        # Oro/Bundle/UserBundle/Entity/Role
+        #
+        role:
+            entity_label:        Role
+            entity_plural_label: Roles
+            entity_description:  User's role
+            id.label:     Id
+            role.label:   Role
+            label.label:  Label
+            owner.label:  Owner

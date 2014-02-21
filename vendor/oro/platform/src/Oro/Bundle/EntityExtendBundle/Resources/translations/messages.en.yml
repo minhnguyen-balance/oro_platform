@@ -1,0 +1,24 @@
+"Your config changes will be applied to schema.": "Your config changes will be applied to schema."
+"It may take few minutes...": "It may take few minutes..."
+"Cancel": "Cancel"
+oro:
+    entity_extend:
+        action:
+            apply_changes: "Apply entityconfig changes"
+            config_entity_grid:
+                unique: "Unique entity unique keys"
+                create: "Create custom entity"
+                remove: "Remove custom entity"
+                unremove: "Unremove custom entity"
+            config_field_grid:
+                create: "Create custom field"
+                update: "Update custom field"
+                remove: "Remove custom field"
+                unremove: "UnRemove custom field"
+        controller:
+            config_entity:
+                message:
+                    saved: "Entity saved"
+            config_field:
+                message:
+                    saved: "Field saved"

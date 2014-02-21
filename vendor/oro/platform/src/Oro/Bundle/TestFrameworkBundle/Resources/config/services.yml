@@ -1,0 +1,4 @@
+parameters:
+    test.client.class:         Oro\Bundle\TestFrameworkBundle\Test\Client
+    search_item_entity_class:  Oro\Bundle\TestFrameworkBundle\Entity\Item
+

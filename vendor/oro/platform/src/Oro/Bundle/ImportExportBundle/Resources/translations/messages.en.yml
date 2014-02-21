@@ -1,0 +1,10 @@
+oro:
+    importexport:
+        import:
+            success: "File was successful imported."
+            error: "Errors occurred during file import."
+            error %number%: "Error in row #%number%."
+        action:
+            general: "General import/action operations"
+            import: "Import entities"
+            export: "Export entities"

@@ -1,0 +1,3 @@
+css:
+    'email':
+      - 'bundles/oroemail/css/style.css'

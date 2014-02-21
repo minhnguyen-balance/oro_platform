@@ -1,0 +1,18 @@
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: orocrm_platform
+    database_user: root
+    database_password: admin123
+    mailer_transport: mail
+    mailer_host: null
+    mailer_port: null
+    mailer_encryption: null
+    mailer_user: null
+    mailer_password: null
+    websocket_host: 127.0.0.1
+    websocket_port: 8080
+    session_handler: session.handler.native_file
+    locale: en
+    secret: 7a20d71cf36fbd9541d86059fe1454b6
+    installed: '2014-02-17T08:04:20+00:00'

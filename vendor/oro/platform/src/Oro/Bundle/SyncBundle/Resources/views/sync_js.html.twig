@@ -1,0 +1,24 @@
+{% if check_ws() %}
+<script type="text/javascript">
+    require(['jquery', 'oro/sync', 'oro/sync/wamp'],
+    function($, sync, Wamp){
+        $(document).on('click.action.data-api', '[data-action=sync-connect]', function (e) {
+            sync.reconnect();
+            $(e.target).closest('.alert').alert('close');
+            e.preventDefault();
+        });
+
+        sync(new Wamp({
+            host: '{{ ws.host == '*' ? app.request.headers.get('host') : ws.host }}',
+            port: {{ ws.port }}
+        }));
+
+        /*mediator.on('datagrid_collection_set_after', function(obj) {
+            sync.keepRelevant(obj.collection);
+            mediator.once('hash_navigation_request:start', function() {
+                sync.stopTracking(obj.collection);
+            });
+        });*/
+    });
+</script>
+{% endif %}

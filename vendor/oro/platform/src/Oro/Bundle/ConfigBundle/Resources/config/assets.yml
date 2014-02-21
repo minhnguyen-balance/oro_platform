@@ -1,0 +1,3 @@
+css:
+    'config':
+      - 'bundles/oroconfig/css/less/config.less'

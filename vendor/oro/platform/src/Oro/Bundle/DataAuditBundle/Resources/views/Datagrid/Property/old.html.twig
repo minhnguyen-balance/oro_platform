@@ -1,0 +1,21 @@
+<ul>
+{% for fieldKey, fieldValue in value %}
+    {% if fieldKey == 'auditData' %}
+        {% if fieldValue.old|length %}
+        {% for collKey, collValue in fieldValue.old %}
+    <li>
+        <b>{{ collKey }}: </b> {{ collValue }}
+    </li>
+        {% endfor %}
+        {% endif %}
+    {% else %}
+    <li>
+        {%  set value = fieldValue.old.timestamp is defined
+            ? fieldValue.old|oro_format_datetime
+            : ( fieldValue.old is iterable ? fieldValue.old|join(', ') : fieldValue.old|default(''))
+        %}
+        <b>{{ fieldKey }}: </b>{{ value }}
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

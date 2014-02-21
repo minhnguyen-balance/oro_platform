@@ -1,0 +1,40 @@
+{% extends bap.layout %}
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+{% import 'OroDataGridBundle::macros.html.twig' as dataGrid %}
+{% block head_script %}
+    {{ parent() }}
+    {% if gridId is defined %}{% placeholder prepare_grid with {'datagrid': datagrid, 'selector': '#' ~ gridId} %}{% endif %}
+{% endblock %}
+{% block content %}
+    <div class="container-fluid page-title">
+        <div class="navigation clearfix navbar-extra navbar-extra-right">
+            <div class="row">
+                <div class="span9">
+                    <div class="pull-left">
+                        <h1 class="oro-subtitle">{{ (pageTitle is defined ? pageTitle : '')|trans }}</h1>
+                    </div>
+                </div>
+                <div class="pull-right title-buttons-container">
+                    {% placeholder index_navButtons_before %}
+                    {% block navButtons %}{% endblock navButtons %}
+                    {% placeholder index_navButtons_after %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% block content_datagrid %}
+        {% if gridName is defined %}
+            {% if params is defined %}
+                {{ dataGrid.renderGrid(gridName, params) }}
+            {% else %}
+                {{ dataGrid.renderGrid(gridName) }}
+            {% endif %}
+            {# Only grids on index pages will be tagged #}
+            <script type="text/javascript">
+                require(['oro/content/grid-builder'], function (GridTagBuilder) {
+                    GridTagBuilder.allowTracking({{ gridName|json_encode|raw }});
+                });
+            </script>
+        {% endif %}
+    {% endblock content_datagrid %}
+{% endblock content %}
